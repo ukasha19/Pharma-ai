@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07090c">
+  <title>PHARMA//AI</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #07090c;
+      color: #f2f4f7;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 85%);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: auto;
+    }
+
+    nav {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #20252d;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+    }
+
+    .logo {
+      font-weight: 700;
+    }
+
+    .status {
+      color: #83f5b5;
+    }
+
+    .status::before {
+      content: "●";
+      margin-right: 7px;
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: #8e98a7;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(52px, 10vw, 105px);
+      line-height: .92;
+      letter-spacing: -4px;
+      max-width: 900px;
+    }
+
+    .accent {
+      color: #7ce5ff;
+    }
+
+    .description {
+      margin-top: 32px;
+      color: #9ca5b3;
+      max-width: 560px;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .enter {
+      display: inline-block;
+      width: fit-content;
+      margin-top: 40px;
+      padding: 15px 22px;
+      border: 1px solid #414957;
+      color: white;
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 2px;
+      transition: .25s;
+    }
+
+    .enter:hover {
+      border-color: #7ce5ff;
+      color: #7ce5ff;
+    }
+
+    .projects {
+      padding: 80px 0 100px;
+      border-top: 1px solid #20252d;
+    }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: #717b89;
+      margin-bottom: 30px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 60px 1fr auto;
+      gap: 20px;
+      padding: 28px 0;
+      border-top: 1px solid #20252d;
+      align-items: center;
+    }
+
+    .number {
+      color: #626c79;
+      font-family: monospace;
+    }
+
+    .project h2 {
+      font-size: 20px;
+      margin-bottom: 7px;
+    }
+
+    .project p {
+      color: #858f9d;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .tag {
+      font-family: monospace;
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: #83f5b5;
+    }
+
+    .prototype {
+      color: #e5c77c;
+    }
+
+    .development {
+      color: #717b89;
+    }
+
+    footer {
+      border-top: 1px solid #20252d;
+      padding: 35px 0 50px;
+      color: #626c79;
+      font-family: monospace;
+      font-size: 11px;
+      line-height: 2;
+    }
+
+    @media (max-width: 650px) {
+      nav {
+        height: 68px;
+      }
+
+      .hero {
+        min-height: 70vh;
+        padding: 60px 0;
+      }
+
+      h1 {
+        letter-spacing: -2.5px;
+      }
+
+      .project {
+        grid-template-columns: 38px 1fr;
+      }
+
+      .tag {
+        grid-column: 2;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <nav>
+      <div class="logo">PHARMA//AI</div>
+      <div class="status">SYSTEM ONLINE</div>
+    </nav>
+
+    <main>
+
+      <section class="hero">
+
+        <div class="eyebrow">
+          EXPERIMENTAL CLINICAL INTELLIGENCE
+        </div>
+
+        <h1>
+          CLINICAL<br>
+          INTELLIGENCE<br>
+          <span class="accent">UNDER PRESSURE.</span>
+        </h1>
+
+        <p class="description">
+          An experimental AI environment for pharmacist training,
+          clinical reasoning and professional decision-making.
+        </p>
+
+        <a class="enter" href="#projects">
+          ENTER LAB →
+        </a>
+
+      </section>
+
+      <section class="projects" id="projects">
+
+        <div class="section-label">
+          ACTIVE EXPERIMENTS
+        </div>
+
+        <div class="project">
+          <div class="number">01</div>
+
+          <div>
+            <h2>ORAL//AI</h2>
+            <p>AI-powered pharmacist examination simulator.</p>
+          </div>
+
+          <div class="tag">● ACTIVE</div>
+        </div>
+
+        <div class="project">
+          <div class="number">02</div>
+
+          <div>
+            <h2>CASE//AI</h2>
+            <p>Adaptive clinical reasoning scenarios.</p>
+          </div>
+
+          <div class="tag">● ACTIVE</div>
+        </div>
+
+        <div class="project">
+          <div class="number">03</div>
+
+          <div>
+            <h2>RECALL//AI</h2>
+            <p>Rapid-fire knowledge and decision training.</p>
+          </div>
+
+          <div class="tag prototype">● PROTOTYPE</div>
+        </div>
+
+        <div class="project">
+          <div class="number">04</div>
+
+          <div>
+            <h2>INTERN//AI</h2>
+            <p>Internship reflection and competency engine.</p>
+          </div>
+
+          <div class="tag development">○ IN DEVELOPMENT</div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer>
+      PHARMA//AI — BUILD 0.1.0<br>
+      PERTH / AUSTRALIA — 2026<br><br>
+      UKAY // LABS
+    </footer>
+
+  </div>
+
+</body>
+</html>
